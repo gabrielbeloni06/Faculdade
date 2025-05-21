@@ -1,3 +1,4 @@
+/*Soma de cada coluna*/
 #include <stdio.h>
 int main(){
     int n,m;
