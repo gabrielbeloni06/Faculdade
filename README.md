@@ -8,7 +8,7 @@ Os arquivos estão organizados por semestre, disciplina ou tipo de conteúdo, co
 
 ## 🛠️ Tecnologias e Linguagens Utilizadas
 
-- C
+- C, C++, C#, Java
 - Arduino
 - Outras linguagens e tecnologias que forem sendo utilizadas no decorrer do curso
 
