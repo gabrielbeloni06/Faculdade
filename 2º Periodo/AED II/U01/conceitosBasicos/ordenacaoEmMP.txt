@@ -1,0 +1,15 @@
+Ordenação por Seleção-> percorre o array procurando a posição do menor número, 
+em seguida é realizada a troca do menor elemento com o elemento da primeira posição, repetindo o processo,
+entretanto desconsiderando as posições que ja foram ordenados os elementos, o algoritmo termina quando a parte
+a ser ordenada tenha somente um elemento, sendo esse o maior da sequência.
+Ordenação por Insersão-> O algoritmo considera a primeira posição como a lista ordenada,
+em seguida caso o elemento da primeira posição seja menor que o da primeira, ele troca os dois elementos,
+garantindo que a lista ordenada tenha tamanho dois, depois é inserido o terceiro elemento, que é copiado para uma variável temporaria
+comparando-os da direita para a esquerda, enquanto o novo elemento é maior que os demais,
+o algoritmo desloca cada elemento da lista ordenada em uma posição a direita.
+Quando encontrada a posição, ele o insere na lista, repetindo até que todos os elementos sejam inseridos na lista
+Quicksort-> Ordenação Rápida: escolhe um elemento como pivô, esse processo compara cada elemento do array com o pivô,
+e reorganiza o arrau de forma que todos os elementos menores ficam a esquerda e os maiores a direita,
+os elementos iguais ficam em qualquer um dos dois conjuntos, o próximo passo repete o processo em cada um dos subarrays,
+de forma que cada um tenha um novo pivô, partindo cada subarray em dois novos,
+repetindo o processo até que cada subarray contenha apenas um número.
