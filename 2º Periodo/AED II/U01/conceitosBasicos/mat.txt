@@ -1,0 +1,29 @@
+Matemática AED II
+
+Potências:
+Multiplicação de mesma base -> soma os expoentes
+Divisão de mesma base -> subtrai os expoentes
+Elevação de potências -> multiplica os expoentes
+
+Logaritmo:
+log = quantas x a base tem que ser multiplicado para chegar no valor
+log2(8) = 3 (2x2x2)
+lg = log2(x)
+logb(1)=0
+logb(b)=1
+logb(a*c)=logb(a) + logb(c)
+logb(a/c)=logb(a) - logb(c)
+logb(a^c)=c * logb(a)
+Mudança de base -> logb(c)=loga(c) / loga(b)
+
+Piso e Teto:
+Piso-> Maior número inteiro menor ou igual ao número de referência
+Teto-> Menor número inteiro maior ou igual ao número de referência
+
+Funções:
+Cúbica-> f(n)=n³
+Quadrática-> f(n)=n²
+Linear-> f(n)=n
+Linear-Logaritmica-> f(n)=n * lg(n)
+Logaritmica->f(n)=lg(n)
+Constante->f(n)=k
