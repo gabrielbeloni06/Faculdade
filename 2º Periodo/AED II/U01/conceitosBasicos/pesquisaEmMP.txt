@@ -1,0 +1,3 @@
+Pesquisa Sequêncial-> Verifica elementos do array um por um, até que encontre o número ou verifique todos
+Pesquisa Binária-> Necessita que o array esteja ordenado, compara com o elemento presente no meio do array, caso o elemento procurado seja menor que o meio repete o processo procurando no subarray da esquerda,
+caso maior verifica no subarray da direita, o processo é repetido até que encontre o valor, ou enquanto tenha números para verificar, cada processo repete o número de busca em 50%
