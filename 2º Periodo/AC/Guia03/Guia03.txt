@@ -1,0 +1,156 @@
+Gabriel Egídio Santos Beloni - 885080
+01a.)
+a) C₁,₆(1001₂)
+1001 -> 001001 (ajustar para 6 bits)
+Inverter: 110110
+Resultado: 110110(2)
+
+b) C₁,₈(1101₂)
+1101 -> 00001101 (ajustar para 8 bits)
+Inverter: 11110010
+Resultado: 11110010(2)
+
+c) C₂,₆(101011₂)
+101011 (já tem 6 bits)
+Inverter (C₁): 010100
+Somar 1: 010101
+Resultado: 010101(2)
+
+d) C₂,₇(101101₂)
+101101 -> 0101101 (ajustar para 7 bits)
+Inverter (C₁): 1010010
+Somar 1: 1010011
+Resultado: 1010011(2)
+
+e) C₂,₈(110010₂)
+110010 -> 00110010 (ajustar para 8 bits)
+Inverter (C₁): 11001101
+Somar 1: 11001110
+Resultado: 11001110(2)
+
+01b.) Arquivo Guia_0301.v
+
+02a.)
+a) C₁,₆(231₄)
+231₄ -> 101101₂ (já tem 6 bits)
+Inverter (C₁): 010010
+Resultado: 010010(2)
+
+b) C₁,₈(E7₁₆)
+E7₁₆ -> 11100111₂ (já tem 8 bits)
+Inverter (C₁): 00011000
+Resultado: 00011000(2)
+
+c) C₂,₆(132₄)
+132₄ -> 011110₂ (já tem 6 bits)
+Inverter (C₁): 100001
+Somar 1: 100010
+Resultado: 100010(2)
+
+d) C₂,₁₀(173₈)
+173₈ -> 001111011₂ (ajustar para 10 bits: 0001111011)
+Inverter (C₁): 1110000100
+Somar 1: 1110000101
+Resultado: 1110000101(2)
+
+e) C₂,₈(9F₁₆)
+9F₁₆ -> 10011111₂ (já tem 8 bits)
+Inverter (C₁): 01100000
+Somar 1: 01100001
+Resultado: 01100001(2)
+
+02b.) Arquivo Guia_0302.v
+
+03a.)
+a) 10011₂ (em C2) -> X(10)
+Subtrair 1: 10010
+Inverter: 01101
+01101₂ = 13₁₀
+Resultado: -13(10)
+
+b) 110111₂ (em C2) -> X(10)
+Subtrair 1: 110110
+Inverter: 001001
+001001₂ = 9₁₀
+Resultado: -9(10)
+
+c) 100101₂ (em C2) -> X(2)
+Subtrair 1: 100100
+Inverter: 011011
+Resultado (valor positivo): 011011(2)
+
+d) 1010011₂ (em C2) -> X(2)
+Subtrair 1: 1010010
+Inverter: 0101101
+Resultado (valor positivo): 0101101(2)
+
+e) 1111011₂ (em C2) -> X(16)
+Subtrair 1: 1111010
+Inverter: 0000101
+0000101₂ = 5₁₀ = 5₁₆
+Resultado (valor positivo): 5(16)
+
+03b.) Arquivo Guia_0303.v
+
+04a.)
+a) 11001₂ - 1111₂
+11001 - 01111 (ajustar para 5 bits)
+11001 + C₂(01111) = 11001 + 10001 = (1)01010
+Resultado: 01010(2)
+
+b) 101,1000₂ - 10,11₂
+101.1000 - 010.1100 (ajustar)
+1011000 + C₂(0101100) -> 01011000 + 11010100 (usando 8 bits, 4 fracionários)
+Soma: (1)00101100
+Resultado: 10.1100(2)
+
+c) 231₄ - 132₄
+101101₂ - 011110₂ (converter para 6 bits)
+101101 + C₂(011110) = 101101 + 100010 = (1)001111
+Resultado em binário: 001111₂
+Resultado em quaternário: 33(4)
+
+d) 654₈ - 375₈
+110101100₂ - 011111101₂ (converter para 9 bits)
+110101100 + C₂(011111101) = 110101100 + 100000011 = (1)010101111
+Resultado em binário: 010101111₂
+Resultado em octal: 257(8)
+
+e) 8B7₁₆ - B13₁₆
+08B7 - 0B13 (resultado será negativo)
+B13 - 8B7 => B13 + C₂(8B7)
+101100010011 + C₁₂(100010110111) = 101100010011 + 011101001001 = (1)001001011100
+Magnitude: 25C₁₆
+Resultado: -25C(16)
+
+04b.) Arquivo Guia_0304.v
+
+05a.)
+a) 110101₂ - 1011₂ (usar 8 bits)
+00110101 - 00001011
+00110101 + C₂(00001011) = 00110101 + 11110101 = (1)00101010
+Resultado: 00101010(2)
+
+b) 101,1001₂ - 5,7₈
+101.1001₂ - 101.111₂ -> 101.1001 - 101.1110
+01011001 - 01011110 (representação inteira com 4 bits fracionários)
+01011001 + C₂(01011110) = 01011001 + 10100010 = 11111011
+Resultado (negativo): 11111011(2)
+
+c) 312₄ - 5C₁₆
+110110₂ - 01011100₂ (usar 8 bits)
+00110110 - 01011100
+00110110 + C₂(01011100) = 00110110 + 10100100 = 11011010
+Resultado (negativo): 11011010(2)
+
+d) B2₁₆ - 1101101₂
+10110010₂ - 01101101₂ (usar 8 bits)
+10110010 + C₂(01101101) = 10110010 + 10010011 = (1)01000101
+Resultado: 01000101(2)
+
+e) 4F₁₆ - 6E₁₆
+01001111₂ - 01101110₂ (usar 8 bits)
+01001111 + C₂(01101110) = 01001111 + 10010010 = 11100001
+Resultado (negativo): 11100001(2)
+
+05b.) Arquivo Guia_0305.v
