@@ -1,0 +1,30 @@
+/*
+Guia_0404.v
+Aluno: Gabriel Egídio Santos Beloni
+Matrícula: 885080
+*/
+/* este foi o código que usei para testar a função da Atividade 04 */
+module f_04_PoS(output s, input x, y, w, z);
+  assign s = (x|y|w|z)         
+           & (x|y|w|~z)       
+           & (x|y|~w|z)       
+           & (x|y|~w|~z)     
+           & (x|~y|w|~z)      
+           & (~x|y|~w|~z)      
+           & (~x|~y|~w|~z);    
+endmodule
+module Guia_0404_tb;
+  reg x,y,w,z;
+  wire s;
+  f_04_PoS DUT(s, x,y,w,z);
+  initial begin
+    $display("Guia_0404 - Teste PoS Atividade 04: f=ΠM(0,1,2,3,5,11,15)");
+    $display("xywz | s");
+    $display("---------");
+    for(integer i=0; i<16; i=i+1) begin
+      {x,y,w,z} = i;
+      #1;
+      $display("%b%b%b%b | %b", x,y,w,z,s);
+    end
+  end
+endmodule
