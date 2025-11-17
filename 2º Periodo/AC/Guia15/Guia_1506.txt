@@ -1,0 +1,22 @@
+; Gabriel Egídio Santos Beloni - 885080
+; Guia_1506 - Exercicio 06
+
+LDA 0100H
+SUI 04H
+MOV B, A
+LDA 0101H
+MOV C, A
+MVI A, 00H
+LOOP:
+MOV D, A
+MOV A, C
+ORA A
+JZ FIM
+MOV A, D
+ADD B
+DCR C
+JMP LOOP
+FIM:
+MOV A, D
+STA 0102H
+HLT

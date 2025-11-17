@@ -1,0 +1,14 @@
+; Gabriel Egídio Santos Beloni - 885080
+; Guia_1507 - Exercicio 07
+
+LDA 0100H
+ANI 01H
+MOV B, A
+LDA 0101H
+ORA A
+RAR
+ORA A
+RAR
+ADD B
+STA 0102H
+HLT

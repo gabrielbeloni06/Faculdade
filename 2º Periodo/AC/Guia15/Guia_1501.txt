@@ -1,0 +1,14 @@
+; Gabriel Egídio Santos Beloni - 885080
+; Guia_1501 - Exercicio 01
+
+LDA 0100H
+MOV B, A
+LDA 0101H
+ADD B
+MOV B, A
+LDA 0102H
+MOV C, A
+MOV A, B
+SUB C
+STA 0103H
+HLT
