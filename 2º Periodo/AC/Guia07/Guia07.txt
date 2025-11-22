@@ -1,0 +1,19 @@
+Gabriel Egídio Santos Beloni - 885080
+01.) Guia_0701.v
+
+02.) Guia_0702.v
+
+03.)Guia_0703.v
+
+04.) Guia_0704.v
+
+05.) Guia_0705.v
+
+OPCIONAIS:
+
+06.) Guia_0706.v
+
+07.) Guia_0707.v
+
+
+Inclui alguns comentários explicando as lógicas usadas e o que foi feito em cada parte para facilitar a identificação e facilitar o entendimento do código de cada exercício.
