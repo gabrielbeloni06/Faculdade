@@ -1,0 +1,43 @@
+Gabriel Egídio Santos Beloni - 885080
+01.) Projeto de um Somador Completo de 5 bits
+O projeto é construído de forma hierárquica a partir de portas lógicas básicas.
+- Módulo Base: Um somador de dois bits, que produz uma soma (s0 = a XOR b) e um transporte (s1 = a AND b).
+- Módulo Intermediário: Um somador de três bits (a, b, carry_in), construído com dois halfAdders e uma porta OR. Ele calcula a soma de uma coluna e o transporte para a próxima.
+- Módulo Principal: Instancia cinco módulos fullAdder em cascata (ripple-carry). O transporte de saída (carry_out) de um somador é conectado ao transporte de entrada (carry_in) do próximo, começando com um carry_in inicial de 0. O resultado é uma soma de 5 bits e um transporte final.
+
+02.) Projeto de um Subtrator Completo de 5 bits
+A subtração A - B é realizada utilizando o somador do exercício anterior, baseado no princípio do complemento de dois: A + C2(B).
+- O complemento de dois de B é C1(B) + 1, ou seja, (NÃO B) + 1.
+- A implementação utiliza o somador de 5 bits. A entrada B é invertida bit a bit antes de entrar no somador.
+- O "+1" da operação de complemento de dois é fornecido definindo o transporte de entrada inicial do primeiro somador como 1.
+
+03.) Projeto de um Comparador de Igualdade de 6 bits
+Para verificar se dois números de 6 bits, A e B, são iguais, todos os seus bits correspondentes devem ser iguais.
+- A lógica A[i] == B[i] é implementada eficientemente por uma porta XNOR.
+- O circuito utiliza seis portas XNOR.
+- As saídas das seis portas XNOR são conectadas a uma porta AND de seis entradas. A saída final será 1 se, e somente se, todas as saídas das XNOR forem 1, indicando que todos são iguais.
+
+04.) Projeto de um Comparador de Desigualdade de 5 bits
+Dois números de 5 bits, A e B, são desiguais se pelo menos um par de bits correspondentes for diferente.
+- A lógica A[i] != B[i] é implementada por uma porta XOR.
+- O circuito utiliza cinco portas XOR, uma para cada par de bits.
+- As saídas das cinco portas XOR são conectadas a uma porta OR de cinco entradas. A saída final será 1 se qualquer uma das saídas das XOR for 1.
+
+05.) Projeto de um Módulo de Complemento de 2 de 5 bits
+O cálculo do complemento de dois de um número A de 5 bits é C2(A) = (NÃO A) + 1.
+- A operação de negação (NÃO A) é feita com cinco portas NOT em paralelo, uma para cada bit de A.
+- A operação de "+1" é realizada por um somador de 5 bits, que soma o resultado de (NÃO A) com o valor '00001'. Este somador é construído de forma hierárquica como no exercício 01.
+
+06.) Projeto de um Somador/Subtrator Algébrico de 6 bits
+Este circuito unifica as operações de soma e subtração usando um sinal de controle.
+- A lógica A - B é A + (~B) + 1.
+- Uma série de seis portas XOR é usada na entrada B. Se subtract = 0, B é passado diretamente (B XOR 0 = B). Se subtract = 1, B é invertido (B XOR 1 = ~B).
+- O mesmo sinal subtract é usado como o transporte de entrada do somador de 6 bits.
+- Se 'subtract' = 0, a operação é A + B + 0 (soma).
+- Se 'subtract' = 1, a operação é A + (~B) + 1 (subtração).
+
+07.) Projeto de um Comparador de Igualdade/Desigualdade de 6 bits
+Este projeto combina os circuitos dos exercícios 03 e 04 e adiciona uma chave de seleção.
+- A lógica de igualdade é calculada como no exercício 03.
+- A lógica de desigualdade é simplesmente a negação do resultado da igualdade.
+- Um MUX 2x1, construído com portas básicas e controlado por uma chave select, direciona um dos dois resultados para a saída final.
