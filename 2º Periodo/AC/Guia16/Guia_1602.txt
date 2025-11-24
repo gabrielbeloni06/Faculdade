@@ -1,0 +1,27 @@
+; Gabriel Egídio Santos Beloni - 885080
+; Guia_1602 - Exercicio 02 - Divisao Inteira (IDIV)
+
+JMP MAIN
+
+IDIV:
+MVI D, 00H
+LOOP_DIV:
+MOV A, B
+CMP C
+JC END_DIV
+SUB C
+MOV B, A
+INR D
+JMP LOOP_DIV
+END_DIV:
+MOV A, D
+RET
+
+MAIN:
+LXI H, 0050H
+MOV B, M
+INX H
+MOV C, M
+CALL IDIV
+STA 0052H
+HLT

@@ -1,0 +1,29 @@
+; Gabriel Egídio Santos Beloni - 885080
+; Guia_1605 - Exercicio 05 - BCD para Hex
+
+JMP MAIN
+
+BCD_HEX:
+MOV A, C
+ANI F0H
+RRC
+RRC
+RRC
+RRC
+MOV B, A
+ADD A
+ADD A
+ADD B
+ADD A
+MOV B, A
+MOV A, C
+ANI 0FH
+ADD B
+RET
+
+MAIN:
+LXI H, 0050H
+MOV C, M
+CALL BCD_HEX
+STA 0051H
+HLT

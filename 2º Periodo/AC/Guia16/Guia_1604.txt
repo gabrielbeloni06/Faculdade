@@ -1,0 +1,32 @@
+; Gabriel Egídio Santos Beloni - 885080
+; Guia_1604 - Exercicio 04 - Menor Valor de Arranjo
+
+JMP MAIN
+
+FIND_MIN:
+MOV A, M
+MOV D, A
+DCR C
+INX H
+LOOP_MIN:
+MOV A, C
+ORA A
+JZ END_MIN
+MOV A, M
+CMP D
+JNC NEXT
+MOV D, A
+NEXT:
+INX H
+DCR C
+JMP LOOP_MIN
+END_MIN:
+MOV A, D
+RET
+
+MAIN:
+LXI H, 0050H
+MVI C, 05H
+CALL FIND_MIN
+STA 0055H
+HLT

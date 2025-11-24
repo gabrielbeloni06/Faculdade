@@ -1,0 +1,25 @@
+; Gabriel Egídio Santos Beloni - 885080
+; Guia_1603 - Exercicio 03 - Resto da Divisao (IMOD)
+
+JMP MAIN
+
+IMOD:
+LOOP_MOD:
+MOV A, B
+CMP C
+JC END_MOD
+SUB C
+MOV B, A
+JMP LOOP_MOD
+END_MOD:
+MOV A, B
+RET
+
+MAIN:
+LXI H, 0050H
+MOV B, M
+INX H
+MOV C, M
+CALL IMOD
+STA 0052H
+HLT
