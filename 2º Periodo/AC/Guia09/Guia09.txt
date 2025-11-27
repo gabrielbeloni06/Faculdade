@@ -1,0 +1,12 @@
+Gabriel Egídio Santos Beloni - 885080
+Guia 09 - Arquitetura de Computadores
+
+01. Guia_0901.v
+02. Guia_0902.v
+03. Guia_0903.v
+04. Guia_0904.v
+05. Guia_0905.v
+06. Guia_0906.v
+07. Guia_0907.v
+
+Clock. clock.v
