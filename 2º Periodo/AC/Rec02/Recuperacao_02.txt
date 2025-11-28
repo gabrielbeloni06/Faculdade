@@ -1,0 +1,92 @@
+Gabriel Egídio Santos Beloni - 885080
+ARQ1 - Recuperação 02
+
+Análise da Tabela e Definições:
+entradas como m = (a, b, c, d) variando de 0 a F.
+saídas de Próximo Estado na ordem dada na tabela "b C a" como (Nb, Nc, Na).
+
+Mapeamento dos Próximos Estados (Nb, Nc, Na):
+m=0 (0000) -> 000
+m=1 (0001) -> 111
+m=2 (0010) -> 001
+m=3 (0011) -> 000
+m=4 (0100) -> 000
+m=5 (0101) -> 000
+m=6 (0110) -> 011
+m=7 (0111) -> 001
+m=8 (1000) -> 000
+m=9 (1001) -> 000
+m=A (1010) -> 101
+m=B (1011) -> 011
+m=C (1100) -> 000
+m=D (1101) -> 000
+m=E (1110) -> 111
+m=F (1111) -> 101
+
+-------------------------------------------------------------------------------
+01. Mapas de Karnaugh e Mintermos
+
+Para FLIP-FLOP A:
+Na = 1 nos índices: 1, 2, 6, 7, 10, 11, 14, 15.
+Mintermos Da: Σm(1, 2, 6, 7, 10, 11, 14, 15)
+
+Para FLIP-FLOP B (Bit mais significativo do grupo "b C a"):
+Nb = 1 nos índices: 1, 6, 10, 11, 14, 15.
+Note: Na linha 6 (0110), tabela diz 011 -> Nb=0. Correção: Tabela diz Nb=0 para m=6.
+Revisão da linha 6 na tabela fornecida: "01" e "10" -> "011". O primeiro bit é 0.
+Revisão da linha B (1011): "011". Nb=0.
+Revisão da linha E (1110): "111". Nb=1.
+Nb = 1 nos índices: 1, 10, 14, 15.
+Mintermos Db: Σm(1, 10, 14, 15)
+
+Para FLIP-FLOP C (Bit do meio do grupo "b C a"):
+Nc = 1 nos índices: 1, 6, 11, 14.
+Mintermos Dc: Σm(1, 6, 11, 14)
+
+-------------------------------------------------------------------------------
+02. Expressões Simplificadas para Flip-Flop A (Na)
+
+a. SoP (Da) = Σm(1, 2, 6, 7, 10, 11, 14, 15)
+Agrupamentos K-Map:
+- (2, 6, 14, 10) -> c.d'
+- (6, 7, 14, 15) -> b.c
+- (10, 11, 14, 15) -> a.c
+- Resta m1 (0001) isolado -> a'.b'.c'.d
+Simplificado: Da = c.d' + b.c + a.c + a'.b'.c'.d
+
+b. SoP (Sa) e (Ra)
+Considerando Qa como a variável de estado atual 'a'.
+Assumindo a ordem padrão de inputs do Kmap "ab\cd" -> a(8), b(4), c(2), d(1).
+Se fosse necessário SR:
+Sa (0->1): Σm(1, 2, 6, 7) [considerando a=0]
+Ra (1->0): Σm(8, 9, 12, 13) [considerando a=1]
+
+c. SoP (Ta)
+Ta = Da XOR Qa.
+Assumindo Ta = Da: Ta = c.d' + b.c + a.c + a'.b'.c'.d
+
+-------------------------------------------------------------------------------
+03. Expressões Simplificadas para Flip-Flop B (Nb)
+
+a. SoP (Db) = Σm(1, 10, 14, 15)
+Agrupamentos:
+- (14, 15) -> a.b.c
+- (10, 14) -> a.c.d'
+- m1 isolado -> a'.b'.c'.d
+Simplificado: Db = a.b.c + a.c.d' + a'.b'.c'.d
+
+-------------------------------------------------------------------------------
+04. Expressões Simplificadas para Flip-Flop C (Nc)
+
+a. SoP (Dc) = Σm(1, 6, 11, 14)
+Não há adjacências diretas potentes.
+Simplificado: Dc = a'.b'.c'.d + a'.b.c.d' + a.b'.c.d + a.b.c.d'
+
+-------------------------------------------------------------------------------
+
+Recuperacao_02.v -> EXERCICIOS DE 2 A 4 AOS QUAIS FORAM PEDIDOS EM TEXTO E VERILOG, ESTÃO SEPARADOS POR COMENTÁRIOS.
+
+Recuperacao_0203.circ -> Exercicio 03 de logism
+Recuperacao_0204.circ -> Exercicio 04 de logism 
+Recuperacao_0205.circ -> Exercicio 05 de logism
+Recuperacao_0206.circ -> Exercicio 06 de logism
