@@ -1,0 +1,12 @@
+Gabriel Egídio Santos Beloni - 885080
+
+Pasta Circ - Arquivos Logism (.circ)
+Pasta verilog - Arquivos .v
+
+Conteúdo - Exercícios de 1 a 6.
+Exercício 01 -> Mealy
+Exercício 02 -> Moore
+Exercício 03 -> 1100
+Exercício 04 -> 1101
+Exercício 05 -> 1102
+Exercício 06 -> 1103
