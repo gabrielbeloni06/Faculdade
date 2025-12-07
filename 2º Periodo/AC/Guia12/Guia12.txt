@@ -1,0 +1,12 @@
+Guia 12 - Gabriel Egídio Santos Beloni - 885080
+
+Exercícios:
+01 - 1201-> Logism e Verilog
+02 - 1202-> Logism e Verilog
+03 - 1203-> Logism e Verilog
+04 - 1204-> Logism e Verilog
+05 - 1205-> Logism e Verilog
+
+Extras:
+06 - 1206-> Logism e Verilog
+07 - 1207-> Logism e Verilog
