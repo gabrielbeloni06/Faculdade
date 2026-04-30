@@ -1,0 +1,58 @@
+--------------------------------------------
+ARQ II - AULA 30/04/2026
+--------------------------------------------
+notes
+$zero->0
+add->faz soma com registradores
+addi->faz soma com números
+nome:->batiza a linha
+j->volta para a linha
+--------------------------------------------
+1-
+
+enunciado
+
+a=10
+b=-1
+a=4*a+1
+c=a+b
+
+
+resolution
+1-
+
+a->$s0
+b->$s1
+c->$s2
+
+sub $t0,$t0,$t0 #t0=0
+
+addi $s0, $t0, 10 # a=0+10
+
+addi $s1,$zero,-1 #b=0-1
+
+add $t0,$s0,$s0 #t0=2a
+add $t0,$t0,$t0 #t0=4a
+addi $s0,$t0,1 #a=t0+1
+
+add $s2,$s0,$s1 #c=a+b
+
+----------------------------------------------
+MARS
+
+1-
+
+#a->$s0
+#b->$s1
+#c->$s2
+
+#sub $t0,$t0,$t0 #t0=0
+
+aqui: addi $s0, $zero, 10 # a=0+10
+addi $s1, $zero, -1 #b=0-1
+add $t0, $s0, $s0 #t0=2a
+add $t0, $t0, $t0 #t0=4a
+addi $s0, $t0, 1 #a=t0+1
+add $s2, $s0, $s1 #c=a+b
+j aqui
+
