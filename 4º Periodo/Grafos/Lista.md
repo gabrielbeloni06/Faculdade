@@ -1,0 +1,25 @@
+# Lista de Exercícios Grafos
+
+## Exercício 01
+
+### 1.1
+
+Em um grafo não-direcionado, cada aresta possui duas pontas, logo 1 grau para cada vértice (exemplo `a---b`: 1 grau para `(a)` e 1 para `(b)`, logo soma é par), portando, cada aresta, contribui com 2 para a soma dos graus, de modo que a soma dos graus de um grafo seja sempre par. Mesmo que existam vértices de grau seja impar, o número de vértices de grau impar será par, porque cada aresta altera o grau de dois vértices ao mesmo tempo, assim os vértices de grau impar sempre são eliminados (exemplo: `a---b`: 1 e 1, ao adicionar um novo vértice `a---b---c` os graus ficam 1,2,1, mostrando que tem um número par de vértices impares, resultando em uma soma par)
+
+### 1.2
+
+Caso 10 pessoas apertem as mãos uma das outras, teremos, 90 apertos de mão, visto 10 pessoas * 9 outras, e ela não pode se auto cumprimentar, mas uma pessoa A cumprimentar B e B cumprimentar A, é a mesma coisa, então o valor é 90/2 = 45 apertos de mão, a relação com grafo, é que uma pessoa pode ser representada como um vértice e um aperto de mão como uma aresta, como uma pessoa aperta a mão de outras 9, cada vértice possui grau 9, logo 10 vértices * grau 9 = 90, que é par, seguindo a propriedade dos grafos não-direcionados de que a soma dos graus de todos os vértices sempre será par, visto que cada aresta contribui com 2 para essa soma.
+
+### 1.3
+
+Não, esse grafo não pode ser conexo, visto que a soma dos graus é 3(2) + 4(1) = 10, logo 5 arestas, não sendo possível ligar 7 vértices com 5 arestas mantendo apenas os graus de 1 e 2.
+
+### 1.4
+
+Sim, é possível que um grupo de 5 pessoas, cada uma delas, possua 2 amigos, exemplo a,b,c,d,e (A[B,C], B[A,E], C[A,D], D[C,E], E[B,D]), cada um possui exatamente 2 amigos. E 3 pessoas do grupo também é possível, é só todas as 3 serem amigas entre si, visto que A[B,C], B[A,C], C[A,B], logo, todos tem exatamente 2 amigos. A ligação com grafos, é que o grau de cada vértice é 2, ilustrando que a soma de graus de um grafo não-direcionado sempre será par.
+
+---
+
+## Exercício 02
+
+### 2.1
